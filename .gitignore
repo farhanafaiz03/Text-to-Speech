@@ -1,0 +1,29 @@
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# IDE/Editor configs
+.vscode/
+.idea/
+*.swp
+
+# macOS / Windows noise
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Compiled / build files
+*.egg-info/
+dist/
+build/
