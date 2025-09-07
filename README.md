@@ -1,34 +1,54 @@
-# Text-to-Speech
-This Python project converts written text into natural-sounding speech using the pytts3x library. Users can input any text, select the language, and listen to the generated audio output. Ideal for applications in accessibility, language learning, and multimedia content creation.
+# 🗣️ Text-to-Speech  
 
-import tkinter as tk
-from tkinter import *
-import pyttsx3
+A simple Python application that converts written text into natural-sounding speech using the **pyttsx3** library.  
+Built with a lightweight **Tkinter GUI**, it’s ideal for accessibility, language learning, or just having your computer talk back to you.  
 
-engine=pyttsx3.init()
+---
 
-def speaknow():
-    engine.say(textv.get())
-    engine.runAndWait()
-    engine.stop()
-    
-root= Tk()
+## Features
+- Convert any text to speech instantly  
+- User-friendly Tkinter interface  
+- Error handling with popup messages (e.g., when no text is entered)  
+- Works offline on Windows, macOS, and Linux  
 
-textv=StringVar()
+---
 
-obj = LabelFrame (root,text="Text to Speech",font= 20,bd=1)
-obj.pack(fill="both",expand="yes",padx=10,pady=10)
+## Getting Started  
 
-lbl=Label(obj,text="Text",font=30)
-lbl.pack(side=tk.LEFT,padx=5)
+### 1. Clone the repository  
+```bash
+git clone <repo-url>
+```
+```bash
+cd Text-to-Speech
+```
+## 2. Create and activate a virtual environment
+```bash
+python -m venv venv
+```
+- On Windows
+```bash
+venv\Scripts\activate
+```
+- On macOS/Linux
+```bash
+source venv/bin/activate  # to activate venv
+```
+## 3. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+## 4. Run the app
+```bash
+python text_to_speech.py
+```
+## Usage 
+- Type your text in the input field
+- Click Speak
+- The app will read the text aloud 🎙️
+- If you click Speak with an empty field, a popup error will appear
 
-text=Entry(obj,textvariable=textv,font=30,width=25,bd=5)
-text.pack(side=tk.LEFT,padx=10)
-
-btn=Button(obj,text="Speak",font=20,bg="Black",fg="White",command=speaknow)
-btn.pack(side=tk.LEFT,padx=10)
-
-root.title("Text to Speech")
-root.geometry("400x200")
-root.resizable(False,False)
-root.mainloop()
+## Tech Stack
+- Python 3
+- kinter (GUI)
+- pyttsx3 (text-to-speech engine)
